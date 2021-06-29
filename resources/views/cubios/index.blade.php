@@ -1,0 +1,1 @@
+vista de los cubios registrados en la bd :D
