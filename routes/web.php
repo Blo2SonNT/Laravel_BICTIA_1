@@ -24,4 +24,7 @@ Route::get('/', function () {
 
 // Route::get('/cubios/create', [TbCubiosController::class, 'create']);
 
-Route::resource('cubios', TbCubiosController::class);
+Route::resource('cubios', TbCubiosController::class)->middleware('auth');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
